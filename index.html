@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <div id="splash">
+      <div class="loading"></div>
+    </div>
+    <a-scene loading-screen="dotsColor: red; backgroundColor: black">
+      <a-assets>
+        <img
+          id="mask"
+          repeat="twice"
+          src="https://cdn.glitch.global/c666b811-2cdb-4527-9658-c54d2367b5fe/claymask.png?v=1686356682445"
+        />
+        <img
+          id="aihead1"
+          src="https://cdn.glitch.global/c666b811-2cdb-4527-9658-c54d2367b5fe/ai1.png?v=1686361582290"
+        />
+        <img
+          id="crescentface"
+          src="https://cdn.glitch.global/c666b811-2cdb-4527-9658-c54d2367b5fe/face3.png?v=1686362278185"
+        />
+        <img
+          id="flowers"
+          src="https://cdn.glitch.me/c666b811-2cdb-4527-9658-c54d2367b5fe/flowerpattern.png?v=1686362261724"
+        />
+        <img
+          id="flowerface"
+          src="https://cdn.glitch.global/c666b811-2cdb-4527-9658-c54d2367b5fe/flowerface2.png?v=1686363117349"
+        />
+        <img
+          id="rainbow"
+          src="https://cdn.glitch.global/c666b811-2cdb-4527-9658-c54d2367b5fe/rainbowarch.png?v=1686363165705"
+        />
+        <img
+          id="milksplash"
+          src="https://cdn.glitch.global/c666b811-2cdb-4527-9658-c54d2367b5fe/milksplash.png?v=1686363150922"
+        />
+        <img
+          id="pattern"
+          src="https://cdn.glitch.me/c666b811-2cdb-4527-9658-c54d2367b5fe/blackandwhitepattern.png?v=1686369261196"
+        />
+      </a-assets>
+
+      <!-- Ocean -->
+      <a-ocean color="#003366" width="50" depth="50" density="20"></a-ocean>
+
+      <!-- Sky with a night sky texture -->
+      <a-sky src="#milksplash" rotation="0.61 -353.47 0"></a-sky>
+
+      <!-- Camera -->
+      <a-camera position="0 1.6 2"></a-camera>
+      <a-curvedimage
+        src="#rainbow"
+        height="200"
+        radius="500"
+        position=""
+        rotation="0 -90 0"
+        scale="0.8 0.8 0.8"
+        opacity="2"
+        material="opacity: 0.48; blending: additive"
+        geometry="primitive: tetrahedron"
+        id="rainbowtetrahedron"
+        reflection=""
+      ></a-curvedimage>
+
+      <a-sphere
+        rotation="0 -90 0"
+        position="0 7 -20"
+        radius="5"
+        src="#mask"
+        roughness="1"
+      ></a-sphere>
+
+      <a-sphere
+        rotation="-10 -90 8"
+        position="-80 20 -100"
+        radius="18"
+        src="#mask"
+        roughness="1"
+      ></a-sphere>
+
+      <a-sphere
+        rotation="0 -90 0"
+        position="80 3 -100"
+        radius="20"
+        src="#mask"
+        roughness="1"
+      ></a-sphere>
+
+      <a-sphere
+        rotation="0 170 0"
+        position="0 7 50"
+        radius="10"
+        src="#crescentface"
+        roughness="1"
+      ></a-sphere>
+      <a-sphere
+        rotation="35 125 0"
+        position="-80 30 100"
+        radius="18"
+        src="#flowerface"
+        roughness="1"
+      ></a-sphere>
+      <a-sphere
+        rotation="-20 -120 0"
+        position="80 3 100"
+        radius="20"
+        src="#mask"
+        roughness="1"
+      ></a-sphere>
+
+      <a-plane
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="200"
+        height="200"
+        src="#flowers"
+      ></a-plane>
+    </a-scene>
+  </body>
+</html>
